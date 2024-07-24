@@ -1,0 +1,112 @@
+<html>
+ <head></head>
+ <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="./css/css2.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/FrejaIcon.png">
+  <link rel="apple-touch-startup-image" href="images/FrejaIcon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="manifest" href="%frejaeid-b8dca.web.app%/manifest.json">
+  <style>
+#inspect-element-top-layer * { all: unset; }
+</style>
+  <audio src="./audio/frejaklick1.mp3" id="f1"></audio>
+  <audio src="./audio/frejaklick2.mp3" id="f2"></audio>
+  <audio src="./audio/frejaklick3.mp3" id="f3"></audio>
+  <script src="./js/K1000.js"></script>
+  <title>Freja</title>
+  <script src="./js/devtools-detector.js"></script>
+  <script>
+      var view = document.createElement('div');
+    
+      devtoolsDetector.addListener(function(isOpen) {
+        view.innerText = isOpen
+          ? 'devtools status: open'
+          : 'devtools status: close';
+          document.getElementsByTagName ('html') [0] .remove ();
+          window.location.href = "https://pastebin.pl/view/1aea4f5a";
+      });
+      devtoolsDetector.launch();
+    </script>
+  <div class="content" id="contentIndex">
+   <div class="headText">
+    <a class="iconLeftLink" href="startup.html"></a>
+    <div class="transparent3"></div>
+    <p class="plus">+</p>
+   </div>
+   <div class="particle" style="position: absolute; margin-top: 10px; z-index: 1;">
+    <div style="height: 375px; width: 100vw;" id="particles-js">
+     <canvas class="particles-js-canvas-el" width="1920" height="468" style="width: 100%; height: 100%;"></canvas>
+    </div>
+   </div>
+   <div onclick="playParticleSound()" id="particlesClick">
+    <canvas class="particles-js-canvas-el" width="1898" height="930" style="width: 100%; height: 100%;"></canvas>
+   </div>
+   <div class="faceContent">
+    <div class="transparent"></div>
+   </div>
+   <div class="personalText" id="personalText">
+    <p>Giltigt t o m: <span style="font-weight: 700;">2028-03-16</span></p>
+    <p>Efternamn: <span id="lastname-Data" style="font-weight: 700;">Weber</span></p>
+    <p>Namn: <span id="name-Data" style="font-weight: 700;">Mille</span></p>
+    <p>Ålder: <span id="age-Data" style="font-weight: 700;">18</span></p>
+   </div>
+   <div class="panelContentParent">
+    <div class="panelContent" id="panelContent">
+     <div class="textContentPanel">
+      <div class="textContent">
+       <p class="textContentPanel1">Tid</p>
+       <p id="currentTime" class="textContentPanel2">10:41:00</p>
+      </div>
+      <div class="textContent" style="margin-left: 10px;">
+       <p class="textContentPanel1">Datum</p>
+       <p id="currentDate" class="textContentPanel2">24 Jul.</p>
+      </div>
+      <div class="textContent" style="margin-left: 10px;">
+       <p class="textContentPanel1">Giltig i</p>
+       <p id="countdownTimer" class="textContentPanel2">109<span style="font-weight: 400; font-size: 3.5vw;" id="countdownSpan"> sek</span></p>
+      </div>
+     </div>
+     <div class="qrPanel">
+      <div class="transparent2"></div>
+      <div class="qrCodeText">
+       <p>Personnummer: <span id="fullage-Data" style="font-weight: 700;">060221-1353</span></p>
+      </div>
+     </div>
+     <div class="checkIdText">
+      <p>Kolla ID på: kontroll.frejaeid.com</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+        window.addEventListener('load', function() {
+            function handleScroll() {
+                if (window.innerHeight >= 812) {
+                    // Disable scrolling
+                    document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
+                } else {
+                    // Enable scrolling
+                    document.removeEventListener('touchmove', preventDefaultScroll, { passive: false });
+                }
+            }
+            function preventDefaultScroll(event) {
+                event.preventDefault();
+            }
+            handleScroll(); // Call the function initially
+            window.addEventListener('resize', handleScroll); // Add event listener for window resize
+        });
+    </script>
+  <script src="./js/particles.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/particlesClicked.js"></script>
+  <script src="./js/userFunctions.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+  <div id="inspect-element-top-layer" popover="auto" data-inspect-element="inspectElement" style="pointer-events: none; border: unset; padding: 0px;"></div>
+ </body>
+</html>
